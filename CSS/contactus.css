@@ -1,0 +1,153 @@
+/* .container:hover {
+      box-shadow:
+        0 0 18px #000000,
+        0 12px 30px rgba(0, 0, 0, 0.75);
+    } */
+
+    h1 {
+      color: #000000;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      text-align: center;
+      /* text-shadow: 0 0 12px #000000; */
+    }
+
+    .subtitle {
+      font-weight: 400;
+      font-size: 1.1rem;
+      text-align: center;
+      color: #000000;
+      margin-bottom: 40px;
+      /* text-shadow: 0 0 6px #007e91; */
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    label {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #000000;
+      display: inline-block;
+    }
+
+    .input-wrapper {
+      position: relative;
+      width: 100%;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 14px 50px 14px 18px;
+      border-radius: 12px;
+      border: 2px solid #000000;
+      /* background: #ebe5e5;
+      color: #e0e6f0; */
+      font-size: 1.05rem;
+      font-weight: 400;
+      resize: vertical;
+      /* box-shadow: inset 0 0 6px #009fbf; */
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      outline-offset: 2px;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #000000;
+    
+    }
+
+    /* Input icons */
+    .input-wrapper svg {
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      fill: #000000;
+      filter: drop-shadow(0 0 1px #000000);
+      width: 22px;
+      height: 22px;
+      pointer-events: none;
+      transition: fill 0.3s ease;
+    }
+    input[type="text"]:focus + svg,
+    input[type="email"]:focus + svg,
+    textarea:focus + svg {
+      fill: #000000;
+      filter: drop-shadow(0 0 3px #000000);
+    }
+
+    textarea {
+      min-height: 120px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .button[type="submit"] {
+      padding: 16px 0;
+      background: #000000;
+      border: none;
+      border-radius: 14px;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.3rem;
+      cursor: pointer;
+      text-align: center;
+    
+      transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.2s ease;
+      user-select: none;
+    }
+
+    .button[type="submit"]:hover,
+    .button[type="submit"]:focus {
+      background: #000000;
+      transform: scale(1.05);
+      outline: none;
+    }
+
+    /* Remove user select on labels and disable outline on buttons */
+    label, .button {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 30px 15px;
+      }
+      .container {
+        padding: 35px 25px;
+      }
+      h1 {
+        font-size: 2.4rem;
+      }
+      .subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+      }
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        font-size: 1rem;
+        padding: 12px 45px 12px 16px;
+      }
+      .button[type="submit"] {
+        font-size: 1.1rem;
+        padding: 14px 0;
+      }
+    }

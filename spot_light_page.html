@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="./images/logo (1).png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRIGHT WORLD</title>
+     <link rel="stylesheet" href="./CSS/index.css">
+  <link rel="stylesheet" href="./CSS/footer.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+ 
+
+    .parent{
+        max-width: 1170px;
+        /* background-color: red; */
+        margin:auto
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    ul{
+        list-style: none;
+    }
+    .footer{
+        background-color: var(--primary-color);
+        padding: 70px 0;
+    }
+    .footer-col{
+        width: 25%;
+        padding: 0 15px;
+    }
+    .footer-col h4{
+        font-size: 18px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+        font-weight: 500;
+        position: relative;
+    }
+    .footer-col h4::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        background-color: #41b0fa;
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+    }
+    .footer-col ul li:not(:last-child){
+        margin-bottom: 10px;
+    }
+    .footer-col ul li a{
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #ffffff;
+        display: block;
+        text-decoration: none;
+        font-weight: 300;
+        color: #ffffff;
+        transition: all 0.3s ease;
+    }
+    .footer-col ul li a:hover{
+        color: #ffffff;
+        padding-left: 8px;
+    }
+    .footer-col .social-links a{
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: rbga(255,255,255,0.2);
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all 0.5s ease;
+    
+    }
+    .footer-col .social-links a:hover{
+        color: #ffffff;
+        background-color: #000000;
+    }
+    /* responsive */
+    @media (max-width: 767px) {
+        .footer-col{
+            width: 50%;
+           margin-bottom: 30px;
+        }
+    }
+    @media (max-width: 574px) {
+        .footer-col{
+            width: 100%;
+        }
+    }
+    
+    
+      </style>
+</head>
+<body>
+
+ <header class="top-header">
+    <div class="container-fluid">
+      <div class="row align-items-center text-center text-md-start">
+        <div class="col-md-3 d-flex align-items-center justify-content-center justify-content-md-start mb-2 mb-md-0 heading">
+          <div class="logo me-2">
+           <a href="./index.html"><img src="./Images/logo (1).png" alt="Logo" /></a> 
+          </div>
+       <a href="./index.html"><h4 class="mb-0 heading-1">BRIGHT WORLD</h4></a>
+        </div>
+
+        <div class="col-md-2 whatsapp">
+          <p><i class="fab fa-whatsapp me-2"></i> 24/7 WhatsApp<br><strong>0384514842</strong></p>
+        </div>
+
+        <div class="col-md-4">
+          <form class="d-flex">
+            <input class="form-control search" type="search" placeholder="Search..." aria-label="Search">
+            <button class="btn btn-light search-icon" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+        </div>
+
+        <div class="col-md-3 text-end">
+          <a href="#" class="icon"><i class="far fa-heart"></i></a>
+          <a href="./sign_up.html" class="icon"><i class="far fa-user"></i></a>
+          <a href="#" class="icon"><i class="fas fa-shopping-cart" onclick="openCart()"></i></a>
+        </div>
+      </div>
+    </div>
+
+
+  <!--  Overlay -->
+  <div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+  <!--  Cart Offcanvas -->
+  <div class="cart-offcanvas" id="cartDrawer">
+    <div class="cart-header">
+      <span>Shopping Cart</span>
+      <button onclick="closeCart()">&times;</button>
+    </div>
+    <div class="cart-content">
+      <p><strong>0 items</strong></p>
+      <p>Your cart is empty</p>
+      <button class="continue-btn" onclick="closeCart()">Continue Shopping</button>
+    </div>
+  </div>
+    
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link animate" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link animate" href="./aboutus.html">About</a></li>
+          <li class="nav-item"><a class="nav-link animate" href="./all_product.html">AllProducts</a></li>
+          <li class="nav-item"><a class="nav-link animate" href="./contactus.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <h2 class="led-bulb mt-5">LED SPOT LIGHTS</h2>
+
+<div class="dropdown">
+  <button class="dropbtn">Products List   <p> <i class="arrow down"></i></p></button>
+  <div class="dropdown-content">
+    <a href="./LED_Light_page.html">LED Light</a>
+    <a href="./spot_light_page.html">Spot Light</a>
+    <a href="./LED_smart_light_page.html">Smart Light</a>
+  </div>
+</div>
+
+
+    <div class="line"></div>
+    <div class="container my-5 text-center">
+
+      <div class="row g-5">
+
+       <div class="col-12 col-md-4">
+  <div class="card">
+    <img src="./images/spot_light_image/spot_1.webp" class="card-img-top img-fluid" alt="...">
+    <!-- Quick View Button -->
+    <button class="quick-view-btn">Quick View</button>
+
+    <div class="card-body d-grid gap-2">
+      <h5 class="card-title">Surface Mounted Cylindrical COB Spot Light</h5>
+      <p class="card-text"> laudantium quos debitis, repudiandae cum nam magnam!</p>
+     <button type="button" class="btn btn-outline-primary rounded-pill buy_button">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+
+           <div class="col-12 col-md-4">
+  <div class="card">
+    <img src="./images/spot_light_image/spot_4.jpg" class="card-img-top img-fluid" alt="...">
+    <!-- Quick View Button -->
+   <button class="quick-view-btn">Quick View</button>
+
+    <div class="card-body d-grid gap-2">
+      <h5 class="card-title"> LED Spot Lights | Track Lights | in Pakistan</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk
+        of the card's content.</p>
+   <button type="button" class="btn btn-outline-primary rounded-pill">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+           <div class="col-12 col-md-4">
+  <div class="card">
+    <img src="./images/spot_light_image/spot_2.webp" class="card-img-top img-fluid" alt="...">
+    <!-- Quick View Button -->
+    <button class="quick-view-btn">Quick View</button>
+
+    <div class="card-body d-grid gap-2">
+      <h5 class="card-title">6 W Aluminium 6W LED Spot Light </h5>
+   <p class="card-text">Some quick example text to build on the card title and make up the bulk
+        of the card's content.</p>
+      <button type="button" class="btn btn-outline-primary rounded-pill">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+
+       <div class="col-12 col-md-4">
+  <div class="card">
+    <img src="./images/spot_light_image/spot_3.webp" class="card-img-top img-fluid" alt="...">
+    <!-- Quick View Button -->
+    <button class="quick-view-btn">Quick View</button>
+
+    <div class="card-body d-grid gap-2">
+      <h5 class="card-title">Factor Mini Spot Light Price in Pakistan</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk
+        of the card's content.</p>
+      <button type="button" class="btn btn-outline-primary rounded-pill">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+           <div class="col-12 col-md-4">
+  <div class="card">
+    <img src="./images/spot_light_image/spot_5.avif" class="card-img-top img-fluid" alt="...">
+    <!-- Quick View Button -->
+    <button class="quick-view-btn">Quick View</button>
+
+    <div class="card-body d-grid gap-2">
+      <h5 class="card-title">Prado Acrobat Surface Adjustable Spot Light | Darklight Design</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk
+        of the card's content.</p>
+      <button type="button" class="btn btn-outline-primary rounded-pill">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+           <div class="col-12 col-md-4">
+  <div class="card">
+    <img src="./images/spot_light_image/spot_6.jpg" class="card-img-top img-fluid" alt="...">
+    <!-- Quick View Button -->
+    <button class="quick-view-btn">Quick View</button>
+
+    <div class="card-body d-grid gap-2">
+      <h5 class="card-title">Buy Single Spotlights Online in Australia | Lights4less</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk
+        of the card's content.</p>
+      <button type="button" class="btn btn-outline-primary rounded-pill">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+
+         <div class="col-12 col-md-4">
+  <div class="card">
+    <img src="./images/spot_light_image/spot_7.jpg" class="card-img-top img-fluid" alt="...">
+    <!-- Quick View Button -->
+    <button class="quick-view-btn">Quick View</button>
+
+    <div class="card-body d-grid gap-2">
+      <h5 class="card-title">Outdoor Spotlights - LED Spotlights - Spot lights</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk
+        of the card's content.</p>
+      <button type="button" class="btn btn-outline-primary rounded-pill">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+        <div class="col-12 col-md-4">
+  <div class="card">
+    <img src="./images/spot_light_image/spot_8.jpg" class="card-img-top img-fluid" alt="...">
+    <!-- Quick View Button -->
+    <button class="quick-view-btn">Quick View</button>
+
+    <div class="card-body d-grid gap-2">
+      <h5 class="card-title">LED Light Track Ceiling Spot Lighting Flexibly Rotatable </h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk
+        of the card's content.</p>
+      <button type="button" class="btn btn-outline-primary rounded-pill">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+
+        <div class="col-12 col-md-4">
+  <div class="card">
+    <img src="./images/spot_light_image/spot_9.jpg" class="card-img-top img-fluid" alt="...">
+    <!-- Quick View Button -->
+    <button class="quick-view-btn">Quick View</button>
+
+    <div class="card-body d-grid gap-2">
+      <h5 class="card-title">Surface spot light LED Adjustable</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk
+        of the card's content.</p>
+      <button type="button" class="btn btn-outline-primary rounded-pill">Buy Now</button>
+    </div>
+  </div>
+</div>
+</div>
+ </div>
+ <div class="line"></div>
+
+ <footer class="footer">
+        <div class="parent">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                      <li><a href="./index.html">home</a></li>
+                      <li><a href="./aboutus.html">about</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affilate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment option</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/ "><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pk.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./javascript/index.js"></script>
+</body>
+</html>
